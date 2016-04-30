@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AppNoticias</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_noticia1">Noticia1</string>
+    <string name="title_activity_noticia2">Noticia2</string>
+    <string name="title_activity_noticia3">Noticia3</string>
+    <string name="title_activity_noticia4">Noticia4</string>
+    <string name="title_activity_noticia5">Noticia5</string>
+    <string name="title_activity_noticia6">Noticia6</string>
+    <string name="title_activity_dialogo_instrucciones">DialogoInstrucciones</string>
+    <string name="title_activity_prueba">Prueba</string>
+</resources>

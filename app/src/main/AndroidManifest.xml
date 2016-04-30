@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="alex.estudio.com.com.appnoticias" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2" >
+        </activity>
+        <activity
+            android:name=".NoticiaPrimera"
+            android:label="@string/title_activity_noticia1" >
+        </activity>
+        <activity
+            android:name=".NoticiaBentley"
+            android:label="@string/title_activity_noticia2" >
+        </activity>
+        <activity
+            android:name=".NoticiaLexus"
+            android:label="@string/title_activity_noticia3" >
+        </activity>
+        <activity
+            android:name=".NoticiaPorsche"
+            android:label="@string/title_activity_noticia4" >
+        </activity>
+        <activity
+            android:name=".NoticiaJaguar"
+            android:label="@string/title_activity_noticia5" >
+        </activity>
+        <activity
+            android:name=".NoticiaAuditt"
+            android:label="@string/title_activity_noticia6" >
+        </activity>
+        <activity
+            android:name=".DialogoInstrucciones"
+            android:label="@string/title_activity_dialogo_instrucciones" >
+        </activity>
+    </application>
+
+</manifest>
