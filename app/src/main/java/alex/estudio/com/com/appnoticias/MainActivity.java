@@ -9,41 +9,30 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
     //Creación de los atributos de del Main
     private ImageButton botonGoToMenu;
     private ImageButton botonExitApp;
     private Button instrucciones;
-
     //Guetter de instrucciones para recogerlo en el Dialogo ( setClickable = true )
     public Button getInstrucciones() {
         return instrucciones;
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         botonGoToMenu = (ImageButton)findViewById(R.id.botonMenu);
         botonExitApp = (ImageButton)findViewById(R.id.salir);
         instrucciones = (Button)findViewById(R.id.instrucciones);
-
-
         //Listeners de los botones declarados en Activity
         botonGoToMenu.setOnClickListener(this);
         botonExitApp.setOnClickListener(this);
         instrucciones.setOnClickListener(this);
-
     }
-
-
     @Override
     public void onClick(View v) {
-
         //El usuario se dirige al Menu de la App
         if (v.getId() == botonGoToMenu.getId()){
-
             Intent i = new Intent(this,Main2Activity.class);
             this.startActivity(i);
         }
@@ -58,14 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         //El usuario acude al dialogo creado de Instrucciones
         if (v.getId() == instrucciones.getId()){
-
             instrucciones.setClickable(false);
             FragmentManager fragmentManager = getFragmentManager();
             DialogoInstrucciones dialogo = new DialogoInstrucciones(this);
             dialogo.show(fragmentManager, "tagInstruccion");
-
         }
-
-
     }
 }
