@@ -8,20 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
 public class DialogoInstrucciones extends DialogFragment {
-
     private MainActivity activity;
-
     public DialogoInstrucciones(MainActivity activity) {
         this.activity = activity;
     }
-
+    
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
         builder.setMessage("Instrucciones:" +
                 "\n"+
                 "\nEl botón gris sirve para poder acceder al menú, donde se encuentran las diferentes noticias." +
@@ -34,11 +29,9 @@ public class DialogoInstrucciones extends DialogFragment {
                     @Override
                     public void onClick(DialogInterface dialog,int id) {
                         dialog.cancel();
-
                         activity.getInstrucciones().setClickable(true);
                     }
                 });
-
         return builder.create();
     }
 }
