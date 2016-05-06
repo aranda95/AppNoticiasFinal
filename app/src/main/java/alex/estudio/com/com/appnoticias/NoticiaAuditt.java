@@ -8,14 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class NoticiaAuditt extends AppCompatActivity implements View.OnClickListener {
-
-
     private ImageButton atras;
     private ImageButton adelante;
     private ImageButton menu;
     private TextView textoAuditt;
     private ImageView imagen;
-
     public int[] imagenes = {R.drawable.auditt, R.drawable.auditt2, R.drawable.auditt3};
     private int posicion = 0, posicionFinal = imagenes.length - 1;
 
@@ -23,19 +20,14 @@ public class NoticiaAuditt extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_noticiaauditt);
-
-
         atras = (ImageButton) findViewById(R.id.atrasAudi);
         adelante = (ImageButton) findViewById(R.id.imageButton4);
         menu = (ImageButton) findViewById(R.id.menu);
         textoAuditt = (TextView) findViewById(R.id.textoAuditt);
         imagen = (ImageView) findViewById(R.id.imagen);
-
         atras.setOnClickListener(this);
         adelante.setOnClickListener(this);
         menu.setOnClickListener(this);
-
-
         textoAuditt.setText("Nuevo Audi TT RS, aterriza con nueva tecnología y 400 caballos de potencia" +
                 "\n" +
                 "La firma de los cuatro aros finalmente ha desvelado el nuevo Audi TT RS, la versión más radical del modelo alemán. Llevamos varios meses hablando de esta novedad y de lo que podríamos esperar de ella y por fin se ha hecho oficial. El nuevo RS de la familia TT enseña un diseño más deportivo, incorpora la última tecnología de la casa y monta un potente motor heredado de su hermano el RS3 con el que eroga nada menos que 400 caballos de potencia. Ha sido desvelado en el Salón de Pekín y se muestra tanto en carrocería Coupé como en Roadster.\n" +
@@ -47,7 +39,6 @@ public class NoticiaAuditt extends AppCompatActivity implements View.OnClickList
                 "Lo que si agrada a cualquiera son las cifras de rendimiento. El Audi TT RS Coupé declara una aceleración de 0-100 km/h de solo 3,7 segundos, empleando 0,2 segundos más la versión Roadster del modelo. La velocidad máxima es de 250 o 280 km/h dependiendo de la versión, aunque en cualquier caso está limitada electrónicamente. Por supuesto la tracción total quattro de la marca llega de serie, elevando la efectividad de la variante.\n" +
                 "\n");
     }
-
         public void metodoatras(){
             if (posicion <= 0) {
                 posicion = posicionFinal;
@@ -56,7 +47,6 @@ public class NoticiaAuditt extends AppCompatActivity implements View.OnClickList
             }
             imagen.setImageResource(imagenes[posicion]);
         }
-
         public void metodoadelante(){
             if (posicion >= posicionFinal) {
                 posicion = 0;
@@ -65,7 +55,6 @@ public class NoticiaAuditt extends AppCompatActivity implements View.OnClickList
             }
             imagen.setImageResource(imagenes[posicion]);
         }
-
     @Override
     public void onClick(View v) {
         if (v.getId() == menu.getId()) {
