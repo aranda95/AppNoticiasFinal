@@ -8,37 +8,26 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class NoticiaJaguar extends AppCompatActivity implements View.OnClickListener {
-
-
-
     private ImageButton atras;
     private ImageButton adelante;
     private ImageButton menu;
     private TextView textoJaguar;
     private ImageView imagen;
-
-
     public int[] imagenes = {R.drawable.jaguar1, R.drawable.jaguar2, R.drawable.jaguar3};
     private int posicion = 0, posicionFinal = imagenes.length - 1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_noticiajaguar);
-
-
-
         atras = (ImageButton) findViewById(R.id.atrasAudi);
         adelante = (ImageButton) findViewById(R.id.imageButton4);
         menu = (ImageButton) findViewById(R.id.menu);
         textoJaguar = (TextView) findViewById(R.id.textoJaguar);
         imagen = (ImageView) findViewById(R.id.imagen);
-
         atras.setOnClickListener(this);
         adelante.setOnClickListener(this);
         menu.setOnClickListener(this);
-
         textoJaguar.setText("Jaguar XFL, la alternativa británica a las berlinas de batalla larga" +
                 "\n" +
                 "\nTal y como estaba previsto, los británicos han aprovechado el Salón de Pekín para dar a conocer el Jaguar XFL, la versión de batalla larga del Jaguar XF que se venderá exclusivamente en el mercado chino. La alternativa británica tendrá que rivalizar con modelos como el Mercedes Clase E de batalla larga, que también ha debutado en Pekín." +
@@ -47,7 +36,6 @@ public class NoticiaJaguar extends AppCompatActivity implements View.OnClickList
                 "\n" +
                 "\nLos pasajeros de las plazas traseras se beneficiarán del sistema de advertencia que avisa cuando un vehículo se aproxima, evitando que pueda colisionar con la puerta del vehículo o, pero aún, atropellar al pasajero que está saliendo del coche.");
     }
-
             public void metodoatras(){
                 if (posicion <= 0) {
                     posicion = posicionFinal;
@@ -56,7 +44,6 @@ public class NoticiaJaguar extends AppCompatActivity implements View.OnClickList
                 }
                 imagen.setImageResource(imagenes[posicion]);
             }
-
             public void metodoadelante(){
                 if (posicion >= posicionFinal) {
                     posicion = 0;
@@ -65,7 +52,6 @@ public class NoticiaJaguar extends AppCompatActivity implements View.OnClickList
                 }
                 imagen.setImageResource(imagenes[posicion]);
             }
-
 
     @Override
     public void onClick(View v) {
@@ -78,6 +64,5 @@ public class NoticiaJaguar extends AppCompatActivity implements View.OnClickList
         if (v.getId() == adelante.getId()){
             metodoadelante();
         }
-
     }
 }
